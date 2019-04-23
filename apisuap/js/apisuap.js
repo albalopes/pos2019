@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
 	$("#botao-login").click(function(e){
 		e.preventDefault();
 		
@@ -33,4 +34,5 @@ $(document).ready(function(){
 		sessionStorage.removeItem("token");
 		window.location.href="login.html";
 	});
+
 });
