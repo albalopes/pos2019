@@ -20,11 +20,13 @@ $(document).ready(function(){
 			type: 'POST',
 			contentType: 'application/json',
 			success: function (data) { 
+				//alert(JSON.stringify(data));
 				sessionStorage.setItem("token", data.token); //Armazenando o token na seção
 				window.location.href="dados.html"; //Redirecionando para a página dados.html
 			},
 			error: function(data){
-				alert("Impossível recuperar dados");
+				alert(data.responseJSON.detail);
+				//alert(JSON.stringify(data));
 			}
 		});
 

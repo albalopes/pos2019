@@ -26,6 +26,11 @@
         <div id="page-content-wrapper">
 
 			<button type="button" id="botao-meusdados" class="btn btn-primary mb-2">Carregar meus dados</button>  
+            
+            <button type="button" id="botao-disciplinas" class="btn btn-primary mb-2">Disciplinas</button>  
+
+
+            <button type="button" id="botao-diarios" class="btn btn-primary mb-2">Meus diários</button>  
 
             <div id="mensagem" class="alert" role="alert">
             </div>
@@ -44,7 +49,12 @@
                         <th>E-mail</th>
                         <td id="usuario-email">---</th>
                     </tr>
+                     <tr>
+                        <th>Foto</th>
+                        <td><img src="" id="id_sua_foto"/></th>
+                    </tr>
                 </table>
+                <img src=""/>
             	
             </div>
             
@@ -53,6 +63,12 @@
 			
 			<div id="avaliacoes">
 			</div>
+
+            <div id="diarios">
+            </div>
+
+
+            
             
         </div>
             
@@ -62,6 +78,11 @@
 
     </div>
     <!-- /#wrapper -->
+
+    <form action="gravar.php" method="post">
+        <input type="text" name="matricula" id="matricula"/>
+        <button type="submit">Enviar</button>
+    </form>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
