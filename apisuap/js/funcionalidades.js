@@ -1,25 +1,5 @@
 $(document).ready(function(){
 
-		$.ajax({
-				headers: { 
-					"Authorization" : "JWT "+sessionStorage.getItem("token")
-				},
-				url: "https://suap.ifrn.edu.br/api/v2/minhas-informacoes/meus-dados/",
-				contentType: 'application/json',
-				dataType: 'json',
-				type: 'GET',
-				success: function (data) {
-					//alert("Dados!");
-					$("#matricula").val(data.matricula);
-				},
-				error: function(data){
-					alert("Impossível recuperar dados. Você deve fazer login!");
-					window.location.href = "login.html";
-				}
-		});
-	
-
-
 	$("#botao-meusdados").click(function(e){
 		$.ajax({
 				headers: { 
@@ -44,33 +24,6 @@ $(document).ready(function(){
 		});
 	});
 	
-	
-	/* COLOQUE AS NOVAS FUNCIONALIDADES AQUI ABAIXO, AINDA DENTRO DO $(document).ready */
-		
-	$("#botao-disciplinas").click(function(e){
-		$.ajax({
-				headers: { 
-					"Authorization" : "JWT "+sessionStorage.getItem("token")
-				},
-				url: "https://suap.ifrn.edu.br/api/v2/edu/alunos/carometro/ZN/2019/",
-				contentType: 'application/json',
-				dataType: 'json',
-				type: 'GET',
-				success: function (data) {
-						$(data).each(function(index, valor){
-							console.log(valor.matricula);
-						});
-				},
-				error: function(data){
-					alert("Impossível recuperar dados. Você deve fazer login!");
-					window.location.href = "login.html";
-				}
-		});
-	});
-
-
-
-
 	$("#botao-diarios").click(function(e){
 		$.ajax({
 				headers: { 
